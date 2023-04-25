@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sample Editor Extension</title>
+    <script src="https://cdn.jsdelivr.net/npm/@contentful/app-sdk@4"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/javascript">
+      window.contentfulApp.init(function (extension) {
+        var value = extension.field.getValue()
+        extension.field.setValue("Hello world!")
+      })
+    </script>
+  </body>
+</html>
